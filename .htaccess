@@ -1,0 +1,10 @@
+# Block everything but public directories.
+# Only works if the server is apache, and override is enabled.
+<IfModule !mod_authz_core.c>
+	Order Deny,Allow
+	Deny from all
+</IfModule>
+
+<IfModule mod_authz_core.c>
+	Require all denied
+</IfModule>
