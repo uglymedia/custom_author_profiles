@@ -20,21 +20,21 @@
 */
 
 /**
- * Global scope wrapper for umd_cap::get_author_meta
+ * Global scope wrapper for um_cap::get_author_meta
  *
  * @param string $field_name The name of the meta field.
  *
  * @return string
  */
-function umd_cap_get_author_meta($field_name){
-	if(!class_exists("umd_cap"))
+function um_cap_get_author_meta($field_name){
+	if(!class_exists("um_cap"))
 		return '';
 
-	return umd_cap::get_author_meta($field_name);
+	return um_cap::get_author_meta($field_name);
 }
 
 /**
- * Global scope wrapper for umd_cap::get_user_meta
+ * Global scope wrapper for um_cap::get_user_meta
  *
  * @param integer $user_id The user id of the particular user you want meta information for.
  * @param string $field_name The name of the meta field.
@@ -42,9 +42,9 @@ function umd_cap_get_author_meta($field_name){
  *
  * @return mixed|string
  */
-function umd_cap_get_user_meta($user_id, $field_name, $single = false){
-	if(!class_exists("umd_cap"))
+function um_cap_get_user_meta($user_id, $field_name, $single = false){
+	if(!class_exists("um_cap"))
 		return '';
 
-	return umd_cap::get_user_meta($user_id, $field_name, $single);
+	return um_cap::get_user_meta($user_id, $field_name, $single);
 }

@@ -1,18 +1,18 @@
 <?php
 /**
  * Plugin Name: Simple Custom Author Profiles
- * Plugin URI: https://www.usbmemorydirect.com/open-source/custom_author_profiles/
+ * Plugin URI: https://www.uglymedia.com/open-source/custom_author_profiles/
  * Description: A simple plugin to add extended author information to a user profile.
- * Version: 1.0.0
- * Author: USB Memory Direct
- * Author URI: https://www.usbmemorydirect.com/
+ * Version: 1.0.1
+ * Author: Ugly Media
+ * Author URI: https://www.uglymedia.com/
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain: custom-author-profiles
  * Domain Path: languages
  *
  * Custom Author Profiles allows you to add additional fields to an author/user profile
- * Copyright (C) 2018  USB Memory Direct
+ * Copyright (C) 2018  Ugly Media Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -35,20 +35,20 @@ if(!function_exists("add_action")){
 	exit();
 }
 
-define( 'UMD_CAP_VERSION', '1.0.0');
-define( 'UMD_CAP_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-define( 'UMD_CAP_INCLUDE_DIR', plugin_dir_path( __FILE__ ) . "includes" . DIRECTORY_SEPARATOR );
-define( 'UMD_CAP_PLUGIN_NAME', plugin_basename( __FILE__ ));
+define( 'UM_CAP_VERSION', '1.0.1');
+define( 'UM_CAP_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+define( 'UM_CAP_INCLUDE_DIR', plugin_dir_path( __FILE__ ) . "includes" . DIRECTORY_SEPARATOR );
+define( 'UM_CAP_PLUGIN_NAME', plugin_basename( __FILE__ ));
 
-require_once(UMD_CAP_INCLUDE_DIR . "umd_cap.class.php");
-umd_cap::init();
+require_once(UM_CAP_INCLUDE_DIR . "um_cap.class.php");
+um_cap::init();
 
-require_once(UMD_CAP_INCLUDE_DIR . "functions.php");
+require_once(UM_CAP_INCLUDE_DIR . "functions.php");
 
 if(is_admin()){
-	require_once(UMD_CAP_INCLUDE_DIR . "umd_cap_admin.class.php");
-	$umd_cap_admin = new umd_cap_admin();
+	require_once(UM_CAP_INCLUDE_DIR . "um_cap_admin.class.php");
+	$um_cap_admin = new um_cap_admin();
 
-	register_activation_hook( __FILE__, array( $umd_cap_admin, 'plugin_activation' ) );
-	register_deactivation_hook( __FILE__, array( $umd_cap_admin, 'plugin_deactivation' ) );
+	register_activation_hook( __FILE__, array( $um_cap_admin, 'plugin_activation' ) );
+	register_deactivation_hook( __FILE__, array( $um_cap_admin, 'plugin_deactivation' ) );
 }

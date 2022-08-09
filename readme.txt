@@ -2,8 +2,8 @@
 Contributors: nicholasmoller, jordanyeffet
 Tags: user-profiles, user-fields, author-profile-fields, author-bio, profile-fields, custom-author-fields, custom-user-fields, custom profile fields
 Requires at least: 3.9.0
-Tested up to: 4.9.8
-Stable tag: 1.0.0
+Tested up to: 6.0.1
+Stable tag: 1.0.1
 Requires PHP: 5.2.4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -19,6 +19,11 @@ Custom Author Profiles simplifies the process of adding custom information to a 
 Upload the plugin to Wordpress, enable it, and start adding new fields!
 
 == Changelog ==
+
+= 1.0.1 =
+*Release Date - 8th August, 2022*
+
+* Internal naming updates.
 
 = 1.0.0 =
 *Release Date - 3rd June, 2018*
